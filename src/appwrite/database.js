@@ -1,5 +1,5 @@
 import  config  from "@/config/config";
-import { Client, Databases,Storage,Query } from "appwrite";
+import { Client, Databases,Storage,Query, ID  } from "appwrite";
 
 // here we are using appwrite sdk to interact with appwrite services
 // I have created a class DatabaseService to interact with appwrite services and also created methods as per requirements
@@ -78,6 +78,30 @@ export class DatabaseService{
             console.error("Appwrite service :: getImageView :: error", error);
             return false;
 
+        }
+    }
+
+    // method to send doubts to db
+
+    async createCourseQueryDocument(className, phoneNo, name, query, batch) {
+        try {
+            let phone = parseInt(phoneNo);
+            const result = await this.databases.createDocument(
+                config.appwriteDatabaseId,
+                config.appwriteCourseQueryId,
+                ID.unique(),
+                {
+                    class: className,
+                    phoneNo: phone,
+                    Name: name,
+                    query: query,
+                    Batch: batch,
+                }
+            );
+           
+        } catch (error) {
+            console.error("Appwrite service :: createCourseQueryDocument :: error", error);
+            return false;
         }
     }
 

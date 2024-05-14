@@ -43,7 +43,7 @@ const Banner: React.FC<{}> = () => {
     fetchData();
   }, []);
 
-  console.log('banners', banners);
+ // console.log('banners', banners);
 
   return (
     <div className="relative w-full lg:h-64 sm:h-full">

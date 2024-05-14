@@ -6,6 +6,7 @@ const config = {
     appwriteCoursesCollectionId: String(process.env.NEXT_PUBLIC_APPWRITE_COURSES_COLLECTION_ID),
     appwriteBannerBucketId: String(process.env.NEXT_PUBLIC_APPWRITE_BANNER_BUCKET_ID),
     appwriteCourseBucketId: String(process.env.NEXT_PUBLIC_APPWRITE_COURSE_BUCKET_ID),
+    appwriteCourseQueryId: String(process.env.NEXT_PUBLIC_APPWRITE_COURSE_QUERY_COLLECTION_ID),
 }
 
 export default config
