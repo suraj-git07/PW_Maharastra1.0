@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MHT-CET Batch Explorer
+
+Welcome to the MHT-CET Batch Explorer project! This web application allows guest users to explore ongoing batches for the Maharashtra Common Entrance Test (MHT-CET). Users can view details about each batch and ask queries related to any batch without the need for registration.
+
+## Features
+
+- View ongoing batches for MHT-CET exam preparation.
+- Explore details about each batch, including schedule, subjects covered, and faculty information.
+- Ask queries related to any batch without registration.
+- Simple and intuitive user interface built with Tailwind CSS.
+- Enhanced typing and error-checking with TypeScript.
+- Backend powered by Appwrite for user authentication and data storage.
+
+## Technologies Used
+
+- **Tailwind CSS:** A utility-first CSS framework for building custom designs quickly.
+- **TypeScript:** A superset of JavaScript that adds static typing and other features to the language.
+- **React:** A JavaScript library for building user interfaces.
+- **Next.js:** A React framework for building server-rendered applications.
+- **Node.js:** A JavaScript runtime for building scalable network applications.
+- **Express:** A minimal and flexible Node.js web application framework.
+- **Appwrite:** An open-source backend server that helps you build, deploy, and manage serverless applications.
 
 ## Getting Started
 
-First, run the development server:
+To get started with the MHT-CET Batch Explorer, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone this repository to your local machine:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   git clone https://github.com/your-username/mht-cet-batch-explorer.git
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Navigate to the project directory:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   cd mht-cet-batch-explorer
+   ```
 
-## Learn More
+3. Install dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Start the development server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+5. Open your web browser and navigate to [http://localhost:3000](http://localhost:3000) to view the application.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Setting up Appwrite Backend
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Sign up for an account on [Appwrite](https://appwrite.io/) if you haven't already.
+
+2. Create a new project in Appwrite.
+
+3. Configure Appwrite SDK in your project:
+
+   ```bash
+   npm install appwrite
+   ```
+
+4. Use Appwrite services for authentication and data storage in your backend code.
+
+## Contributing
+
+Contributions are welcome! If you have any ideas, suggestions, or bug reports, please feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
