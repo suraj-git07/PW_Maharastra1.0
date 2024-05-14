@@ -35,10 +35,10 @@ const Batch: React.FC = () => {
       </div>
       <p className="text-center max-sm:text-sm max-sm:pr-3  max-sm:pl-2 font-roboto font-normal text-gray-700 mb-8">With PW Maharashtra, we offer online batches tailored for students in class 9 to 12 including special dropper batch.</p>
 
-      <div className="flex justify-center max-sm:overflow-x-auto max-sm:pt-5 ">
+      <div className="flex justify-center max-sm:overflow-x-scroll max-sm:pt-5 ">
         <div className="flex justify-center ">
           {circlesData.map((circle, index) => (
-            <div key={index} className="text-center mx-8">
+            <div key={index} className="text-center mx-8 ">
               <button
                 onClick={() => handleButtonClick(index)}
                 className={`w-28 h-28 shadow-lg rounded-full flex items-center justify-center mb-3 focus:outline-none ${circle.bgColor} transform transition-transform hover:scale-105`}
