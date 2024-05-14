@@ -35,10 +35,10 @@ const FormModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="relative bg-white rounded-lg shadow-lg p-4 md:p-5 flex flex-col md:flex-row ">
+      <div className="relative bg-white rounded-lg shadow-lg p-4 md:p-2 flex flex-col md:flex-row max-ms:mr-6">
         {/* First Column */}
         <div className="flex-1 w-full md:w-1/2 flex flex-col justify-center px-4">
-          <div className="mb-4">
+          <div className="mb-3">
             <h3 className="text-lg mt-5 font-outfit font-semibold text-gray-900 text-center">
               Ask Doubt!
             </h3>
@@ -132,14 +132,14 @@ const FormModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 rows={3}
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2"
                 placeholder="Write your doubt here"
               ></textarea>
             </div>
             {/* Submit button */}
             <button
               type="submit"
-              className=" bg-purple-600 text-white rounded-md px-4 py-2  transition-colors duration-300 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium text-sm block mx-auto"
+              className=" bg-purple-600 text-white rounded-md px-4 py-2   transition-colors duration-300 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium text-sm block mx-auto"
               disabled={isLoading}
             >
               {isLoading ? 'Submitting...' : 'Submit'}
@@ -161,7 +161,7 @@ const FormModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           <button
             type="button"
             onClick={onClose}
-            className="text-gray-900  mt-7  rounded-lg z-50 text-sm w-10 h-10 "
+            className="text-gray-900    rounded-lg z-50 text-sm w-10 h-10 "
             aria-label="Close modal"
           >
             <X size={24} />

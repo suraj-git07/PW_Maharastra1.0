@@ -59,7 +59,7 @@ const CourseModal: React.FC<CourseModalProps> = ({ id, title, imageSrc, newPrice
                   />
                 </div>
                 <div >
-                  <h4 className="mb-1 pr-36 font-outfit font-normal text-sm text-gray-500">Subjects</h4>
+                  <h4 className="mb-1 pr-60 font-outfit font-normal text-sm text-gray-500">Subjects</h4>
                   <p className="pl-3 font-outfit font-medium text-sm">{subjects.join(', ')}</p>
                 </div>
               </div>

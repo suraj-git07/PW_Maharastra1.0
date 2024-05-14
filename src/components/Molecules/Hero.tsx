@@ -36,7 +36,7 @@ function Hero() {
         <p className="text-gray-500">The most affordable learning solution.</p>
         <Link href="https://www.pw.live/study/batches" target='_blank'>
           <div className='lg:p-0 px-20 pb-10'>
-          <button className="px-9 py-2 mt-10 text-center  rounded border border-solid border-purple-600 font-roboto font-medium bg-purple-600 text-white transition-colors duration-300 hover:bg-purple-800 hover:text-white">
+          <button className="px-9 py-2 mt-10 text-center  max-sm:px-6  rounded border border-solid border-purple-600 font-roboto font-medium bg-purple-600 text-white transition-colors duration-300 hover:bg-purple-800 hover:text-white">
             Visit PW
           </button>
           </div>
