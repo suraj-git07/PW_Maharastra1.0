@@ -76,16 +76,16 @@ const BatchModal: React.FC<BatchModalProps> = ({ onClose, batchIndex }) => {
     <div className='fixed inset-0 flex justify-center items-center z-30 bg-opacity-30 bg-black'>
       <div className='bg-white  shadow-xl px-2 w-full h-full bg-gradient-to-b from-white to-gray-100'>
         <button onClick={onClose} className='absolute top-5 right-5 p-2'><X size={25} className='text-gray-800' /></button>
-        <div className="flex items-center justify-between py-2 ml-6 mt-6 ">
-          <div className="flex items-center pb-3 mb-3 ml-3">
+        <div className="flex items-center justify-between py-2 m-auto max-sm:mt-14 mt-3 ">
+          <div className="flex items-center pb-3 mb-3 m-auto">
             <Image
               src="/pwlogot.png"
               alt="PW Logo"
               width={45}
               height={45}
-              className='mr-3'
+              className='mr-3 max-sm:w-10 max-sm:h-10 '
             />
-            <h1 className="font-outfit text-2xl font-bold">Ongoing Batches For {classNumber}</h1>
+            <h1 className="font-outfit max-sm:text-xl text-2xl font-bold">Ongoing Batches For {classNumber}</h1>
           </div>
         </div>
         <div className="overflow-x-auto  px-7 scrollbar-hide ">
@@ -94,7 +94,7 @@ const BatchModal: React.FC<BatchModalProps> = ({ onClose, batchIndex }) => {
               courseDetails.map((bdata, index) => (
                 <BatchCard key={index} {...bdata} />
               )) :
-              <div className="flex flex-col ml-48 pl-48 items-center justify-center h-full">
+              <div className="flex flex-col m-auto p-auto items-center justify-center h-full">
                 <Image
                   src="/nocourse.png"
                   alt="No course"
@@ -112,7 +112,7 @@ const BatchModal: React.FC<BatchModalProps> = ({ onClose, batchIndex }) => {
         </div>
         <div className="text-center -mt-3">
           <Link href="https://www.pw.live/study/batches" target='_blank'>
-            <h1 className="px-9 py-2 ml-10 mt-10 text-center font-outfit font-normal text-indigo-600">
+            <h1 className="px-9 py-2 m-auto mt-10 text-center font-outfit font-normal text-indigo-600">
               Explore All Batches
             </h1>
           </Link>

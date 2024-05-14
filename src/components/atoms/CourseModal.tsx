@@ -24,19 +24,19 @@ const CourseModal: React.FC<CourseModalProps> = ({ id, title, imageSrc, newPrice
     <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-50 h-auto w-full" >
       <div className="bg-white w-full h-full scrollbar-hide rounded-lg shadow-lg m-4 p-2 overflow-auto">
         <div className="flex justify-between items-center  bg-purple-400 rounded-t-lg py-8 text-white p-4 ">
-          <h1 className="text-4xl font-outfit pl-5 font-bold">{title}</h1>
+          <h1 className="text-4xl max-sm:text-2xl font-outfit pl-5 font-bold">{title}</h1>
           <button onClick={onClose}>
-            <X size={30} className="text-white " />
+            <X size={30} className="text-white max-sm:mt-[-4vh] " />
           </button>
         </div>
         <div className="border-t border-4 border-pink-500 mb-2"></div>
-        <div className="flex">
+        <div className="flex max-sm:flex-col-reverse">
           {/* Course Details */}
-          <div className="bg-white rounded-lg shadow-lg p-6 mr-4 w-2/3">
+          <div className="bg-white rounded-lg shadow-lg p-6 m-auto w-2/3 max-sm:w-11/12 max-sm:mt-3">
             <div className="flex flex-col mb-4">
-              <h2 className="text-lg font-roboto font-semibold text-left ml-6  text-gray-900 mb-6  pt-2">This Batch Includes</h2>
+              <h2 className="text-lg font-roboto font-semibold text-left pl-6 max-sm:pl-0 max-sm:text-center text-gray-900 mb-6  pt-2">This Batch Includes</h2>
               <div className="flex mb-2">
-                <div className=" pl-6">
+                <div className="max-sm:pl-0 pl-6">
                   <Image
                     src="/calendar.png"
                     alt="calendar"
@@ -45,12 +45,12 @@ const CourseModal: React.FC<CourseModalProps> = ({ id, title, imageSrc, newPrice
                   />
                 </div>
                 <div>
-                  <h4 className="mb-1 pr-24 font-outfit font-normal text-sm text-gray-500">Course Duration</h4>
-                  <p className="pl-3 font-outfit font-medium text-sm">{courseDuration}</p>
+                  <h4 className="mb-1 text-left pl-3 font-outfit font-normal text-sm text-gray-500">Course Duration</h4>
+                  <p className="pl-3 max-sm:text-left font-outfit font-medium text-sm">{courseDuration}</p>
                 </div>
               </div>
               <div className="flex  mt-6">
-                <div className="pl-6">
+                <div className="pl-6 max-sm:pl-0">
                   <Image
                     src="/bookmark.png"
                     alt="subject"
@@ -59,15 +59,15 @@ const CourseModal: React.FC<CourseModalProps> = ({ id, title, imageSrc, newPrice
                   />
                 </div>
                 <div >
-                  <h4 className="mb-1 pr-60 font-outfit font-normal text-sm text-gray-500">Subjects</h4>
-                  <p className="pl-3 font-outfit font-medium text-sm">{subjects.join(', ')}</p>
+                  <h4 className="mb-1 text-left pl-3 font-outfit font-normal text-sm text-gray-500">Subjects</h4>
+                  <p className="pl-3 max-sm:text-left font-outfit font-medium text-sm">{subjects.join(', ')}</p>
                 </div>
               </div>
               <div className="flex flex-col mt-6 mb-2">
                 <div className="flex flex-col ">
                   {Include.map((item, index) => (
-                    <div key={index} className="flex mb-4">
-                      <div className="pl-6">
+                    <div key={index} className="flex mb-4 ">
+                      <div className="pl-6 max-sm:pl-0 ">
                         <Image
                           src="/star.png"
                           alt="icon"
@@ -76,7 +76,7 @@ const CourseModal: React.FC<CourseModalProps> = ({ id, title, imageSrc, newPrice
                         />
                       </div>
                       <div>
-                        <p className="pl-3  font-outfit font-normal text-sm">{item}</p>
+                        <p className="pl-3 max-sm:text-left  font-outfit font-normal text-sm">{item}</p>
                       </div>
                     </div>
                   ))}

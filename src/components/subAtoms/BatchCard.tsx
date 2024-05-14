@@ -62,7 +62,7 @@ const BatchCard: React.FC<BatchCardProps> = ({ id, title, imageSrc, newPrice, ol
       </div>
       <div className="flex items-center justify-between mt-4">
 
-        <div className="hidden md:block flex-grow mr-3 ml-5">
+        <div className="md:block flex-grow mr-3 ml-5">
           <button className="px-8 py-2   rounded border-2 border-solid border-purple-400 flex justify-center items-center gap-2.5 text-purple-600 font-roboto font-medium text-center  transition-colors duration-300 hover:bg-purple-400 hover:text-white" onClick={handleModalOpen} >
             Explore
           </button>

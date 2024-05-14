@@ -66,7 +66,7 @@ const Banner: React.FC<{}> = () => {
             key={banners[currentIndex].$id}
             src={appwriteService.getImageView(banners[currentIndex].$id) || ''}
             alt="Banner Image"
-            className="w-full h-full  bg-center bg-cover duration-500"
+            className="w-full h-full max-sm:h-[32vw] bg-center bg-cover duration-500"
           />
           {/* Left Arrow */}
           <div className='hidden max-sm:top-[40%] group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>

@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-50 text-black ">
-            <div className="container pl-20 max-sm:pl-3  flex flex-col lg:flex-row justify-between items-start lg:items-center py-12">
+        <footer className="bg-gray-50 text-black m-auto flex">
+            <div className="w-11/12 m-auto   flex flex-col lg:flex-row justify-around items-start lg:items-center py-12">
                 {/* Left Side */}
                 <div className="flex flex-col items-center lg:items-start mb-8 lg:mb-0">
                     <div className="flex-shrink-0 flex items-center">
@@ -147,12 +147,12 @@ const Footer = () => {
 
 
                 {/* Right Side */}
-                <div className="flex flex-col max-sm:flex-row max-sm:mt-10 max-sm:pl-4   lg:flex-row lg:justify-between pr-16">
+                <div className="flex flex-col max-sm:flex-row max-sm:mt-10  max-sm:w-full max-sm:justify-around  lg:flex-row mt-3 w-5/12 justify-between ">
                     {/* Our Company */}
-                    <div className="mb-8 lg:mb-12 mr-20 max-sm:mr-12">
+                    <div className="mb-8 lg:mb-12  ">
                         <h4 className="text-lg font-roboto font-medium  mb-8"> Company</h4>
                         <ul className='font-roboto font-normal text-md text-gray-500'>
-                            <li className='mb-5 max-sm:pt-7'>
+                            <li className='mb-5 '>
                                 <Link href="https://www.pw.live/about-us" target="_blank">About Us</Link>
                             </li>
                             <li className='mb-5 max-sm:text-sm '>
@@ -170,7 +170,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     {/* Our Centers */}
-                    <div className="mb-8 lg:mb-12  max-sm:mr-12  mr-20">
+                    <div className="mb-8 lg:mb-12   ">
                         <h4 className="text-lg font-roboto font-medium  mb-8"> Our Centers</h4>
                         <ul className='font-roboto font-normal text-md text-gray-500'>
                             <li className='mb-5 max-sm:text-sm'>
@@ -191,7 +191,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     {/* Popular Exams */}
-                    <div className="mb-8 lg:mb-12 mr-7">
+                    <div className="mb-8 lg:mb-12 ">
                         <h4 className="text-lg font-roboto font-medium  mb-8"> Popular Exam</h4>
                         <ul className='font-roboto font-normal text-md text-gray-500'>
                             <li className='mb-5'>

@@ -18,9 +18,9 @@ const Results = () => {
     return (
         
         
-        <div className="container  bg-gradient-to-r from-indigo-100 to-white pb-16 pt-4">
+        <div className="  bg-gradient-to-r from-indigo-100 to-white pb-16 pt-4 ">
           
-            <div className="flex items-center mb-1 max-sm:pl-4  pl-14 pt-4 justify-center">
+            <div className="flex items-center mb-1 w-full   pt-4 justify-center">
                 <h2 className="text-4xl  text-gray-900 font-outfit font-semibold text-center">Results </h2>
                 <Image
                     src="/trophy.png"
@@ -32,7 +32,7 @@ const Results = () => {
                 />
             </div>
             <div className="overflow-x-auto scrollbar-hide">
-                <div className="flex py-4 px-7 ">
+                <div className="flex py-4  ">
                     <ResultCarousel results={results} />
                 </div>
             </div>
