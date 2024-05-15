@@ -67,6 +67,21 @@ export class DatabaseService{
         }
     }
 
+    // get all courses title form db
+
+    async getAllCourseTitles() {
+        try {
+            const result = await this.databases.listDocuments(
+                config.appwriteDatabaseId,
+                config.appwriteCoursesCollectionId
+            );
+            const titles = result.documents.map(doc => doc.title);
+            return titles;
+        } catch (error) {
+            console.error("Appwrite service :: getAllCourseTitles :: error", error);
+            return false;
+        }
+    }
 
     // method to get image of a particular file id
      getImageView(fileid){

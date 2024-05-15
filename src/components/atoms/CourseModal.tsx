@@ -22,7 +22,7 @@ const CourseModal: React.FC<CourseModalProps> = ({ id, title, imageSrc, newPrice
   
   return (
     <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-50 h-auto w-full" >
-      <div className="bg-white w-full h-full scrollbar-hide rounded-lg shadow-lg m-4 p-2 overflow-auto">
+      <div className="bg-white w-full h-full scrollbar-hide rounded-lg shadow-lg m-auto p-2 overflow-auto">
         <div className="flex justify-between items-center  bg-purple-400 rounded-t-lg py-8 text-white p-4 ">
           <h1 className="text-4xl max-sm:text-2xl font-outfit pl-5 font-bold">{title}</h1>
           <button onClick={onClose}>
@@ -30,7 +30,7 @@ const CourseModal: React.FC<CourseModalProps> = ({ id, title, imageSrc, newPrice
           </button>
         </div>
         <div className="border-t border-4 border-pink-500 mb-2"></div>
-        <div className="flex max-sm:flex-col-reverse">
+        <div className="flex max-sm:flex-col-reverse ">
           {/* Course Details */}
           <div className="bg-white rounded-lg shadow-lg p-6 m-auto w-2/3 max-sm:w-11/12 max-sm:mt-3">
             <div className="flex flex-col mb-4">
@@ -85,7 +85,7 @@ const CourseModal: React.FC<CourseModalProps> = ({ id, title, imageSrc, newPrice
 
             </div>
           </div>
-          <div>
+          <div className='max-sm:m-auto'>
             <CourseCard {...{imageSrc, newPrice, oldPrice, saveAmt, link, language}} />
           </div>
         </div>

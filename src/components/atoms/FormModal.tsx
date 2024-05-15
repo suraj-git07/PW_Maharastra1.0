@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { X } from 'lucide-react';
 import Image from 'next/image';
 import appwriteService from "../../appwrite/database";
@@ -13,6 +13,7 @@ const FormModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const [query, setQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
+  const [courseTitles, setCourseTitles] = useState<string[]>([]);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -32,6 +33,22 @@ const FormModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
       setIsLoading(false);
     }
   };
+
+
+  useEffect(() => {
+      async function fetchCourseTitles() {
+          try {
+              const titles = await appwriteService.getAllCourseTitles();
+              if (titles) {
+                  setCourseTitles(titles);
+              }
+          } catch (error) {
+              console.error('Error fetching course titles:', error);
+          }
+      }
+
+      fetchCourseTitles();
+  }, []);
 
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
@@ -70,16 +87,19 @@ const FormModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
               >
                 Batch
               </label>
-              <input
-                type="text"
-                name="batch"
-                id="batch"
-                value={batch}
-                onChange={(e) => setBatch(e.target.value)}
-                className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                placeholder="Physics Wallah Batch"
-                required
-              />
+             
+              <select
+            name="batch"
+            id="batch"
+            value={batch}
+            onChange={(e) => setBatch(e.target.value)}
+            className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+        >
+            <option value="" disabled>Select batch</option>
+            {courseTitles.map((title, index) => (
+                <option key={index} value={title}>{title}</option>
+            ))}
+        </select>
             </div>
             <div>
               <label
