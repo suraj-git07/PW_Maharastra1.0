@@ -54,9 +54,9 @@ const BatchCard: React.FC<BatchCardProps> = ({ id, title, imageSrc, newPrice, ol
       </div>
       <div className="flex justify-between items-center mt-4 pl-5">
         <div className="flex gap-3">
-          <p className="text-3xl font-outfit font-semibold text-purple-600">{'₹'+newPrice}</p>
+          <p className="text-3xl font-outfit font-semibold text-purple-600">{newPrice}</p>
           <div className="inline-block pt-2">
-            <p className="text-md font-outfit font-semibold line-through text-gray-500">{"₹"+oldPrice}</p>
+            <p className="text-md font-outfit font-semibold line-through text-gray-500">{oldPrice}</p>
           </div>
         </div>
       </div>

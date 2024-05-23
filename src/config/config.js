@@ -7,6 +7,7 @@ const config = {
     appwriteBannerBucketId: String(process.env.NEXT_PUBLIC_APPWRITE_BANNER_BUCKET_ID),
     appwriteCourseBucketId: String(process.env.NEXT_PUBLIC_APPWRITE_COURSE_BUCKET_ID),
     appwriteCourseQueryId: String(process.env.NEXT_PUBLIC_APPWRITE_COURSE_QUERY_COLLECTION_ID),
+    googleSheetsAPIEndpoint: String(process.env.NEXT_PUBLIC_GOOGLE_SHEETS_API_ENDPOINT),
 }
 
 export default config

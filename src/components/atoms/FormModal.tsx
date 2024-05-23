@@ -3,6 +3,7 @@ import React, { useState,useEffect } from 'react';
 import { X } from 'lucide-react';
 import Image from 'next/image';
 import appwriteService from "../../appwrite/database";
+import  config  from "@/config/config";
 
 
 const FormModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -15,11 +16,58 @@ const FormModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   
   const [courseTitles, setCourseTitles] = useState<string[]>([]);
 
+  
+  const GOOGLE_SHEETS_API_ENDPOINT = config.googleSheetsAPIEndpoint;
+
+
+  const isValidPhoneNumber = (phone: string) => {
+    const phoneRegex = /^\d{10}$/;
+    return phoneRegex.test(phone);
+  };
+  
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+    // Validation checks
+    if (!name) {
+      alert('Please enter your name.');
+      return;
+    }
+    if (!batch) {
+      alert('Please select your batch.');
+      return;
+    }
+    if (!isValidPhoneNumber(phone)) {
+      alert('Please enter a valid phone number.');
+      return;
+    }
+    if (!selectedClass) {
+      alert('Please select your class.');
+      return;
+    }
+    if (!query) {
+      alert('Please enter your doubt.');
+      return;
+    }
+
     setIsLoading(true);
     try {
       await appwriteService.createCourseQueryDocument(selectedClass,phone, name, query,batch);
+      
+      const googleSheetsData = { Name: name, Batch :batch ,Phone :phone,class:selectedClass,Query: query};
+      // console.log('Google Sheets API data:', googleSheetsData);
+      
+      const response = await fetch(GOOGLE_SHEETS_API_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(googleSheetsData),
+      });
+
+      const result = await response.text();
+      // console.log('Google Sheets API response:', result)
+      
+      
       setName('');
       setBatch('');
       setPhone('');
